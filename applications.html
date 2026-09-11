@@ -1,120 +1,326 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
     <title>HustlerX - Applications</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<div class="navbar">
-    <div class="logo"><img src="icon.png" alt="HustlerX logo">Hustler<span>X</span></div>
-    
 
-    <div>
-        <a href="index.html">Home</a>
-        <a href="jobs.html">Find Jobs</a>
-        <a href="fresh-jobs.html">Fresh Jobs</a>
-        <a href="recommended.html">Recommended</a>
-        <a href="saved.html">Saved</a>
-        <a href="applications.html">Applications</a>
-        <a href="alerts.html">Alerts</a>
-        <a href="profile.html">Profile</a>
+<div class="navbar">
+
+    <div class="logo">
+
+        <img src="icon.png" alt="HustlerX logo">
+
+        Hustler<span>X</span>
+
     </div>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="jobs.html">Find Jobs</a>
+
+        <a href="fresh-jobs.html">Fresh Jobs</a>
+
+        <a href="recommended.html">Recommended</a>
+
+        <a href="saved.html">Saved</a>
+
+        <a href="applications.html" class="active">
+            Applications
+        </a>
+
+        <a href="alerts.html">Alerts</a>
+
+        <a href="profile.html">Profile</a>
+
+        <a href="form.html">Sign Up</a>
+
+        <a href="login.html">Login</a>
+
+    </div>
+
 </div>
+
 
 <div class="container">
 
+
     <div class="page-title">
-        <h1>📋 My Applications</h1>
-        <p>Track all your job applications in one place.</p>
-    </div>
 
-    <div class="stats">
+        <h1>
+            My Applications
+        </h1>
 
-        <div class="stat">
-            <h2>14</h2>
-            <p>Applications</p>
-        </div>
-
-        <div class="stat">
-            <h2>5</h2>
-            <p>Assessments</p>
-        </div>
-
-        <div class="stat">
-            <h2>3</h2>
-            <p>Interviews</p>
-        </div>
-
-        <div class="stat">
-            <h2>1</h2>
-            <p>Selected</p>
-        </div>
+        <p>
+            Track the jobs you have applied to.
+        </p>
 
     </div>
+
+
+    <form
+        class="form-box"
+        id="applicationForm"
+    >
+
+
+        <div class="form-group">
+
+            <label for="company">
+                Company Name
+            </label>
+
+            <input
+                id="company"
+                type="text"
+                placeholder="Enter company name"
+                required
+                minlength="2"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="jobRole">
+                Job Role
+            </label>
+
+            <input
+                id="jobRole"
+                type="text"
+                placeholder="Enter job role"
+                required
+                minlength="2"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="applicationDate">
+                Application Date
+            </label>
+
+            <input
+                id="applicationDate"
+                type="date"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="status">
+                Application Status
+            </label>
+
+            <select
+                id="status"
+                required
+            >
+
+                <option value="">
+                    Select application status
+                </option>
+
+                <option>
+                    Applied
+                </option>
+
+                <option>
+                    Under Review
+                </option>
+
+                <option>
+                    Interview
+                </option>
+
+                <option>
+                    Selected
+                </option>
+
+                <option>
+                    Rejected
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="button"
+        >
+            Add Application
+        </button>
+
+
+        <div
+            id="applicationMessage"
+            class="form-message"
+        ></div>
+
+
+    </form>
+
+
+    <br>
+    <br>
+
+
+    <h2 class="section-title">
+        Your Applications
+    </h2>
+
 
     <div class="table-box">
 
+
         <table>
 
-            <tr>
-                <th>Company</th>
-                <th>Role</th>
-                <th>Date</th>
-                <th>Status</th>
-            </tr>
+            <thead>
 
-            <tr>
-                <td>Microsoft</td>
-                <td>Software Engineer</td>
-                <td>20 Aug 2026</td>
-                <td>
-                    <span class="status assessment">Assessment</span>
-                </td>
-            </tr>
+                <tr>
 
-            <tr>
-                <td>Razorpay</td>
-                <td>Full Stack Developer</td>
-                <td>18 Aug 2026</td>
-                <td>
-                    <span class="status interview">Interview</span>
-                </td>
-            </tr>
+                    <th>
+                        Company
+                    </th>
 
-            <tr>
-                <td>Deloitte</td>
-                <td>Data Analyst</td>
-                <td>15 Aug 2026</td>
-                <td>
-                    <span class="status applied">Applied</span>
-                </td>
-            </tr>
+                    <th>
+                        Job Role
+                    </th>
 
-            <tr>
-                <td>Infosys</td>
-                <td>Software Developer</td>
-                <td>10 Aug 2026</td>
-                <td>
-                    <span class="status selected">Selected</span>
-                </td>
-            </tr>
+                    <th>
+                        Date
+                    </th>
 
-            <tr>
-                <td>Google</td>
-                <td>Software Engineer</td>
-                <td>5 Aug 2026</td>
-                <td>
-                    <span class="status rejected">Rejected</span>
-                </td>
-            </tr>
+                    <th>
+                        Status
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <tr>
+
+                    <td>
+                        Microsoft
+                    </td>
+
+                    <td>
+                        Software Engineer Intern
+                    </td>
+
+                    <td>
+                        10 Sept 2026
+                    </td>
+
+                    <td>
+
+                        <span class="status status-applied">
+                            Applied
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Deloitte
+                    </td>
+
+                    <td>
+                        Data Analyst
+                    </td>
+
+                    <td>
+                        8 Sept 2026
+                    </td>
+
+                    <td>
+
+                        <span class="status status-review">
+                            Under Review
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Google
+                    </td>
+
+                    <td>
+                        Product Intern
+                    </td>
+
+                    <td>
+                        5 Sept 2026
+                    </td>
+
+                    <td>
+
+                        <span class="status status-interview">
+                            Interview
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+            </tbody>
 
         </table>
 
+
     </div>
+
 
 </div>
 
+
+<div class="footer">
+
+    <p>
+        © 2026 HustlerX | Find. Apply. Achieve.
+    </p>
+
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

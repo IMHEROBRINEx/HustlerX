@@ -1,25 +1,54 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
     <title>HustlerX - Find Jobs</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<div class="navbar">
-    <div class="logo"><img src="icon.png" alt="HustlerX logo">Hustler<span>X</span></div>
-    
 
-    <div>
+<div class="navbar">
+
+    <div class="logo">
+
+        <img src="icon.png" alt="HustlerX logo">
+
+        Hustler<span>X</span>
+
+    </div>
+
+
+    <div class="nav-links">
+
         <a href="index.html">Home</a>
-        <a href="jobs.html">Find Jobs</a>
+
+        <a href="jobs.html" class="active">
+            Find Jobs
+        </a>
+
         <a href="fresh-jobs.html">Fresh Jobs</a>
+
         <a href="recommended.html">Recommended</a>
+
         <a href="saved.html">Saved</a>
+
         <a href="applications.html">Applications</a>
+
         <a href="alerts.html">Alerts</a>
+
         <a href="profile.html">Profile</a>
+
+        <a href="form.html">Sign Up</a>
+
+        <a href="login.html">Login</a>
+
     </div>
 
 </div>
@@ -27,61 +56,128 @@
 
 <div class="container">
 
+
     <div class="page-title">
 
-        <h1>Find Jobs</h1>
+        <h1>
+            Find Jobs
+        </h1>
 
         <p>
-            Search for your next opportunity.
+            Search for fresh opportunities using keywords and filters.
         </p>
 
     </div>
 
 
-    <!-- SEARCH AND FILTERS -->
+    <form
+        class="filters"
+        id="jobSearchForm"
+    >
 
-    <div class="filters">
 
-        <input type="text" placeholder="Job title or skill">
+        <input
+            type="text"
+            placeholder="Job title, skill or company"
+            required
+            minlength="2"
+        >
 
-        <input type="text" placeholder="Location">
 
-        <select>
+        <input
+            type="text"
+            placeholder="Location"
+        >
 
-            <option>All Job Types</option>
 
-            <option>Internship</option>
+        <select required>
 
-            <option>Full-Time</option>
+            <option value="">
+                Job Type
+            </option>
+
+            <option>
+                Internship
+            </option>
+
+            <option>
+                Full Time
+            </option>
+
+            <option>
+                Part Time
+            </option>
 
         </select>
 
 
-        <select>
+        <select required>
 
-            <option>Posted Anytime</option>
+            <option value="">
+                Posted Within
+            </option>
 
-            <option>Last 24 Hours</option>
+            <option>
+                24 Hours
+            </option>
 
-            <option>Last 3 Days</option>
+            <option>
+                3 Days
+            </option>
 
-            <option>Last 7 Days</option>
-
-            <option>Last 30 Days</option>
+            <option>
+                7 Days
+            </option>
 
         </select>
 
 
-        <button class="button">
+        <button
+            class="button"
+            type="submit"
+        >
             Search
         </button>
 
-    </div>
+
+    </form>
 
 
-    <!-- JOB CARDS -->
+    <div
+        id="jobMessage"
+        class="form-message"
+    ></div>
+
 
     <div class="cards">
+
+
+        <div class="card">
+
+            <h3>
+                Software Engineer Intern
+            </h3>
+
+            <p class="company">
+                Microsoft
+            </p>
+
+            <p>
+                📍 Bangalore
+            </p>
+
+            <p class="fresh">
+                🔥 Posted 3 hours ago
+            </p>
+
+            <a
+                href="applications.html"
+                class="button"
+            >
+                Apply / Track
+            </a>
+
+        </div>
 
 
         <div class="card">
@@ -98,70 +194,18 @@
                 📍 Bangalore
             </p>
 
-            <p>
-                React • Node.js • SQL
-            </p>
-
             <p class="fresh">
-                🔥 Posted 1 day ago
+                🔥 Posted Today
             </p>
 
-            <span class="match">
-                91% Match
-            </span>
-
-            <br>
-
-            <a href="#" class="button">
-                Apply Now
-            </a>
-
-            <a href="saved.html" class="outline-button">
-                Save
+            <a
+                href="applications.html"
+                class="button"
+            >
+                Apply / Track
             </a>
 
         </div>
-
-
-
-        <div class="card">
-
-            <h3>
-                Software Engineer
-            </h3>
-
-            <p class="company">
-                Microsoft
-            </p>
-
-            <p>
-                📍 Bangalore
-            </p>
-
-            <p>
-                Python • DSA • SQL
-            </p>
-
-            <p class="fresh">
-                🔥 Posted 3 hours ago
-            </p>
-
-            <span class="match">
-                94% Match
-            </span>
-
-            <br>
-
-            <a href="#" class="button">
-                Apply Now
-            </a>
-
-            <a href="saved.html" class="outline-button">
-                Save
-            </a>
-
-        </div>
-
 
 
         <div class="card">
@@ -178,352 +222,37 @@
                 📍 Hyderabad
             </p>
 
-            <p>
-                Excel • SQL • Tableau
-            </p>
-
             <p class="fresh">
-                🔥 Posted 2 days ago
+                🔥 Posted Yesterday
             </p>
 
-            <span class="match">
-                87% Match
-            </span>
-
-            <br>
-
-            <a href="#" class="button">
-                Apply Now
-            </a>
-
-            <a href="saved.html" class="outline-button">
-                Save
+            <a
+                href="applications.html"
+                class="button"
+            >
+                Apply / Track
             </a>
 
         </div>
 
-
-
-        <div class="card">
-
-            <h3>
-                Frontend Developer
-            </h3>
-
-            <p class="company">
-                Zomato
-            </p>
-
-            <p>
-                📍 Gurgaon
-            </p>
-
-            <p>
-                HTML • CSS • React
-            </p>
-
-            <p class="fresh">
-                🔥 Posted 4 days ago
-            </p>
-
-            <span class="match">
-                86% Match
-            </span>
-
-            <br>
-
-            <a href="#" class="button">
-                Apply Now
-            </a>
-
-            <a href="saved.html" class="outline-button">
-                Save
-            </a>
-
-        </div>
 
     </div>
 
-
-
-    <!-- ================= JOB LOCATION MAP ================= -->
-
-    <div class="job-map-section">
-
-
-        <!-- LEFT SIDE -->
-
-        <div class="job-list">
-
-            <h2>
-                Fresh Opportunities
-            </h2>
-
-            <p class="map-subtitle">
-                Explore where companies are hiring.
-            </p>
-
-
-            <div class="map-job-card">
-
-                <div class="job-top">
-
-                    <div>
-
-                        <h3>
-                            Software Engineer
-                        </h3>
-
-                        <p class="company">
-                            Microsoft
-                        </p>
-
-                    </div>
-
-                    <span class="match">
-                        94%
-                    </span>
-
-                </div>
-
-                <p>
-                    📍 Bangalore
-                </p>
-
-                <p>
-                    Python • DSA • SQL
-                </p>
-
-                <p class="fresh">
-                    🔥 Posted 3 hours ago
-                </p>
-
-                <a href="#" class="button">
-                    Apply Now
-                </a>
-
-            </div>
-
-
-
-            <div class="map-job-card">
-
-                <div class="job-top">
-
-                    <div>
-
-                        <h3>
-                            Full Stack Developer
-                        </h3>
-
-                        <p class="company">
-                            Razorpay
-                        </p>
-
-                    </div>
-
-                    <span class="match">
-                        91%
-                    </span>
-
-                </div>
-
-                <p>
-                    📍 Bangalore
-                </p>
-
-                <p>
-                    React • Node.js • SQL
-                </p>
-
-                <p class="fresh">
-                    🔥 Posted Today
-                </p>
-
-                <a href="#" class="button">
-                    Apply Now
-                </a>
-
-            </div>
-
-
-
-            <div class="map-job-card">
-
-                <div class="job-top">
-
-                    <div>
-
-                        <h3>
-                            Data Analyst
-                        </h3>
-
-                        <p class="company">
-                            Deloitte
-                        </p>
-
-                    </div>
-
-                    <span class="match">
-                        87%
-                    </span>
-
-                </div>
-
-                <p>
-                    📍 Hyderabad
-                </p>
-
-                <p>
-                    Excel • SQL • Tableau
-                </p>
-
-                <p class="fresh">
-                    🔥 Posted 2 days ago
-                </p>
-
-                <a href="#" class="button">
-                    Apply Now
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- RIGHT SIDE MAP -->
-
-        <div class="map-container">
-
-            <div class="map-heading">
-
-                <div>
-
-                    <h2>
-                        Job Locations
-                    </h2>
-
-                    <p>
-                        Fresh opportunities across India
-                    </p>
-
-                </div>
-
-                <span class="map-count">
-                    3 Jobs
-                </span>
-
-            </div>
-
-
-            <div class="map">
-
-
-                <!-- Bangalore -->
-
-                <div class="map-point point1">
-
-                    <span>
-                        📍
-                    </span>
-
-                    <div class="location-box">
-
-                        <b>
-                            Microsoft
-                        </b>
-
-                        <br>
-
-                        Software Engineer
-
-                        <br>
-
-                        Bangalore
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Bangalore -->
-
-                <div class="map-point point2">
-
-                    <span>
-                        📍
-                    </span>
-
-                    <div class="location-box">
-
-                        <b>
-                            Razorpay
-                        </b>
-
-                        <br>
-
-                        Full Stack Developer
-
-                        <br>
-
-                        Bangalore
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Hyderabad -->
-
-                <div class="map-point point3">
-
-                    <span>
-                        📍
-                    </span>
-
-                    <div class="location-box">
-
-                        <b>
-                            Deloitte
-                        </b>
-
-                        <br>
-
-                        Data Analyst
-
-                        <br>
-
-                        Hyderabad
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <div class="map-info">
-
-                <span>
-                    🔵 Fresh Jobs
-                </span>
-
-                <span>
-                    🔥 Posted Recently
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </div>
 
 
+<div class="footer">
+
+    <p>
+        © 2026 HustlerX | Find. Apply. Achieve.
+    </p>
+
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

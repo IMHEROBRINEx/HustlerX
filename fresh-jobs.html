@@ -1,80 +1,252 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
     <title>HustlerX - Fresh Jobs</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<div class="navbar">
-    <div class="logo"><img src="icon.png" alt="HustlerX logo">Hustler<span>X</span></div>
-    
 
-    <div>
-        <a href="index.html">Home</a>
-        <a href="jobs.html">Find Jobs</a>
-        <a href="fresh-jobs.html">Fresh Jobs</a>
-        <a href="recommended.html">Recommended</a>
-        <a href="saved.html">Saved</a>
-        <a href="applications.html">Applications</a>
-        <a href="alerts.html">Alerts</a>
-        <a href="profile.html">Profile</a>
+<div class="navbar">
+
+    <div class="logo">
+
+        <img src="icon.png" alt="HustlerX logo">
+
+        Hustler<span>X</span>
+
     </div>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="jobs.html">Find Jobs</a>
+
+        <a href="fresh-jobs.html" class="active">
+            Fresh Jobs
+        </a>
+
+        <a href="recommended.html">Recommended</a>
+
+        <a href="saved.html">Saved</a>
+
+        <a href="applications.html">Applications</a>
+
+        <a href="alerts.html">Alerts</a>
+
+        <a href="profile.html">Profile</a>
+
+        <a href="form.html">Sign Up</a>
+
+        <a href="login.html">Login</a>
+
+    </div>
+
 </div>
+
 
 <div class="container">
 
+
     <div class="page-title">
-        <h1>🔥 Fresh Opportunities</h1>
-        <p>Only recently posted jobs.</p>
+
+        <h1>
+            Fresh Jobs
+        </h1>
+
+        <p>
+            Find recently posted opportunities before they become old.
+        </p>
+
     </div>
+
+
+    <form
+        class="filters"
+        id="freshForm"
+    >
+
+
+        <select required>
+
+            <option value="">
+                Posted Within
+            </option>
+
+            <option>
+                24 Hours
+            </option>
+
+            <option>
+                3 Days
+            </option>
+
+            <option>
+                7 Days
+            </option>
+
+        </select>
+
+
+        <select required>
+
+            <option value="">
+                Job Type
+            </option>
+
+            <option>
+                Internship
+            </option>
+
+            <option>
+                Full Time
+            </option>
+
+        </select>
+
+
+        <button
+            class="button"
+            type="submit"
+        >
+            Apply Filters
+        </button>
+
+
+    </form>
+
+
+    <div
+        id="freshMessage"
+        class="form-message"
+    ></div>
+
 
     <div class="cards">
 
-        <div class="card">
-            <h3>Software Engineer Intern</h3>
-            <p class="company">Microsoft</p>
-            <p>📍 Bangalore</p>
-            <p class="fresh">🔥 Posted 2 hours ago</p>
-            <span class="match">94% Match</span>
-            <br>
-            <a href="#" class="button">Apply Now</a>
-        </div>
 
         <div class="card">
-            <h3>Full Stack Engineer</h3>
-            <p class="company">Razorpay</p>
-            <p>📍 Bangalore</p>
-            <p class="fresh">🔥 Posted 5 hours ago</p>
-            <span class="match">91% Match</span>
-            <br>
-            <a href="#" class="button">Apply Now</a>
+
+            <span class="fresh-badge">
+                NEW
+            </span>
+
+            <h3>
+                Product Intern
+            </h3>
+
+            <p class="company">
+                Google
+            </p>
+
+            <p>
+                📍 Bengaluru
+            </p>
+
+            <p class="fresh">
+                🔥 2 hours ago
+            </p>
+
+            <a
+                href="applications.html"
+                class="button"
+            >
+                Apply / Track
+            </a>
+
         </div>
 
-        <div class="card">
-            <h3>Software Developer</h3>
-            <p class="company">Infosys</p>
-            <p>📍 Pune</p>
-            <p class="fresh">🔥 Posted Today</p>
-            <span class="match">88% Match</span>
-            <br>
-            <a href="#" class="button">Apply Now</a>
-        </div>
 
         <div class="card">
-            <h3>Data Analyst Intern</h3>
-            <p class="company">Deloitte</p>
-            <p>📍 Hyderabad</p>
-            <p class="fresh">🔥 Posted Today</p>
-            <span class="match">87% Match</span>
-            <br>
-            <a href="#" class="button">Apply Now</a>
+
+            <span class="fresh-badge">
+                NEW
+            </span>
+
+            <h3>
+                Marketing Intern
+            </h3>
+
+            <p class="company">
+                Adobe
+            </p>
+
+            <p>
+                📍 Noida
+            </p>
+
+            <p class="fresh">
+                🔥 5 hours ago
+            </p>
+
+            <a
+                href="applications.html"
+                class="button"
+            >
+                Apply / Track
+            </a>
+
         </div>
+
+
+        <div class="card">
+
+            <span class="fresh-badge">
+                NEW
+            </span>
+
+            <h3>
+                Business Analyst
+            </h3>
+
+            <p class="company">
+                Deloitte
+            </p>
+
+            <p>
+                📍 Hyderabad
+            </p>
+
+            <p class="fresh">
+                🔥 Today
+            </p>
+
+            <a
+                href="applications.html"
+                class="button"
+            >
+                Apply / Track
+            </a>
+
+        </div>
+
 
     </div>
 
+
 </div>
 
+
+<div class="footer">
+
+    <p>
+        © 2026 HustlerX | Find. Apply. Achieve.
+    </p>
+
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

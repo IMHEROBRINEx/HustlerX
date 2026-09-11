@@ -1,36 +1,56 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
     <title>HustlerX - Home</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
+
 <body>
+
 
 <div class="navbar">
 
     <div class="logo">
+
         <img src="icon.png" alt="HustlerX logo">
+
         Hustler<span>X</span>
+
     </div>
+
 
     <div class="nav-links">
 
         <a href="index.html" class="active">Home</a>
+
         <a href="jobs.html">Find Jobs</a>
+
         <a href="fresh-jobs.html">Fresh Jobs</a>
+
         <a href="recommended.html">Recommended</a>
+
         <a href="saved.html">Saved</a>
+
         <a href="applications.html">Applications</a>
+
         <a href="alerts.html">Alerts</a>
+
         <a href="profile.html">Profile</a>
+
+        <a href="form.html">Sign Up</a>
+
+        <a href="login.html">Login</a>
 
     </div>
 
 </div>
 
-
-<!-- HERO SECTION -->
 
 <section class="hero">
 
@@ -50,7 +70,7 @@
         </p>
 
 
-        <div class="search-box">
+        <form class="search-box" id="homeSearchForm">
 
             <div class="search-field">
 
@@ -59,6 +79,8 @@
                 <input
                     type="text"
                     placeholder="Job title, skill or company"
+                    required
+                    minlength="2"
                 >
 
             </div>
@@ -76,11 +98,11 @@
             </div>
 
 
-            <button>
+            <button type="submit">
                 Search Jobs
             </button>
 
-        </div>
+        </form>
 
 
         <div class="hero-tags">
@@ -93,15 +115,14 @@
 
         </div>
 
+
     </div>
 
 </section>
 
 
-
-<!-- WHY HUSTLERX -->
-
 <div class="container">
+
 
     <h2 class="section-title">
         Why HustlerX?
@@ -128,7 +149,6 @@
         </div>
 
 
-
         <div class="feature">
 
             <div class="feature-icon">
@@ -144,7 +164,6 @@
             </p>
 
         </div>
-
 
 
         <div class="feature">
@@ -163,14 +182,12 @@
 
         </div>
 
+
     </div>
 
 
-    <br>
-    <br>
+    <br><br>
 
-
-    <!-- RECENT JOBS -->
 
     <h2 class="section-title">
         Recently Posted
@@ -194,7 +211,6 @@
 
             </div>
 
-
             <h3>
                 Software Engineer Intern
             </h3>
@@ -211,15 +227,11 @@
                 🔥 Posted 3 hours ago
             </p>
 
-            <a
-                href="jobs.html"
-                class="button"
-            >
+            <a href="jobs.html" class="button">
                 View Job →
             </a>
 
         </div>
-
 
 
         <div class="card">
@@ -235,7 +247,6 @@
                 </span>
 
             </div>
-
 
             <h3>
                 Full Stack Developer
@@ -253,15 +264,11 @@
                 🔥 Posted Today
             </p>
 
-            <a
-                href="jobs.html"
-                class="button"
-            >
+            <a href="jobs.html" class="button">
                 View Job →
             </a>
 
         </div>
-
 
 
         <div class="card">
@@ -277,7 +284,6 @@
                 </span>
 
             </div>
-
 
             <h3>
                 Data Analyst
@@ -295,25 +301,19 @@
                 🔥 Posted Yesterday
             </p>
 
-            <a
-                href="jobs.html"
-                class="button"
-            >
+            <a href="jobs.html" class="button">
                 View Job →
             </a>
 
         </div>
+
 
     </div>
 
 </div>
 
 
-
-<!-- OFFICE LOCATION -->
-
 <section class="office-section">
-
 
     <div class="office-background"></div>
 
@@ -323,17 +323,10 @@
     <div class="office-content">
 
 
-        <!-- LEFT SIDE -->
-
         <div class="office-info">
 
-
             <div class="office-label">
-
-                <span></span>
-
                 HUSTLERX HEADQUARTERS
-
             </div>
 
 
@@ -352,14 +345,13 @@
 
             <p class="office-description">
 
-                From California, HustlerX connects ambitious students with
-                fresh opportunities that can shape their careers.
+                From California, HustlerX connects ambitious students
+                with fresh opportunities that can shape their careers.
 
             </p>
 
 
             <div class="office-address">
-
 
                 <div class="location-icon">
                     ⌖
@@ -389,7 +381,6 @@
 
             <div class="office-buttons">
 
-
                 <a
                     href="https://www.google.com/maps/search/?api=1&query=101+California+Street+San+Francisco+CA"
                     target="_blank"
@@ -413,14 +404,10 @@
         </div>
 
 
-
-        <!-- RIGHT SIDE MAP -->
-
         <div class="office-map-card">
 
 
             <div class="map-card-header">
-
 
                 <div>
 
@@ -443,25 +430,21 @@
 
                 </div>
 
-
             </div>
-
 
 
             <div class="office-map">
 
                 <iframe
                     src="https://www.google.com/maps?q=101%20California%20Street%2C%20San%20Francisco%2C%20CA&output=embed"
-                    allowfullscreen=""
+                    allowfullscreen
                     loading="lazy">
                 </iframe>
 
             </div>
 
 
-
             <div class="map-footer">
-
 
                 <div>
 
@@ -501,7 +484,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -513,9 +495,6 @@
 </section>
 
 
-
-<!-- FOOTER -->
-
 <div class="footer">
 
     <p>
@@ -525,5 +504,8 @@
 </div>
 
 
+<script src="script.js"></script>
+
 </body>
+
 </html>

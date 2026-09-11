@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>HustlerX - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="navbar">
+
+    <div class="logo">
+
+        <img src="icon.png" alt="HustlerX logo">
+
+        Hustler<span>X</span>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="jobs.html">Find Jobs</a>
+
+        <a href="fresh-jobs.html">Fresh Jobs</a>
+
+        <a href="recommended.html">Recommended</a>
+
+        <a href="saved.html">Saved</a>
+
+        <a href="applications.html">Applications</a>
+
+        <a href="alerts.html">Alerts</a>
+
+        <a href="profile.html">Profile</a>
+
+        <a href="form.html">Sign Up</a>
+
+        <a href="login.html" class="active">Login</a>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+
+
+    <div class="page-title">
+
+        <h1>
+            Welcome Back
+        </h1>
+
+        <p>
+            Login to continue your HustlerX journey.
+        </p>
+
+    </div>
+
+
+    <form
+        class="form-box"
+        id="loginForm"
+    >
+
+
+        <div class="form-group">
+
+            <label for="loginEmail">
+                Email
+            </label>
+
+            <input
+                id="loginEmail"
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="loginPassword">
+                Password
+            </label>
+
+            <input
+                id="loginPassword"
+                type="password"
+                placeholder="Enter your password"
+                required
+                minlength="8"
+            >
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="button"
+        >
+            Login
+        </button>
+
+
+        <p class="login-link">
+
+            Don't have an account?
+
+            <a href="form.html">
+                Create an account
+            </a>
+
+        </p>
+
+
+        <div
+            id="loginMessage"
+            class="form-message"
+        ></div>
+
+
+    </form>
+
+
+</div>
+
+
+<div class="footer">
+
+    <p>
+        © 2026 HustlerX | Find. Apply. Achieve.
+    </p>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
