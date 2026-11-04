@@ -73,3 +73,5 @@ IMPLEMENTATION_TDD.md
 
 # Local design review screenshots
 .impeccable/review/
+.vercel
+.env*

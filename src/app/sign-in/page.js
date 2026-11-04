@@ -2,7 +2,6 @@
 
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { FaGoogle } from "react-icons/fa";
 import { Loader2 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Navbar from "@/components/Navbar";
@@ -36,7 +35,6 @@ function SignInContent() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isGoogleSubmitting, setIsGoogleSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const isMountedRef = useRef(true);
@@ -109,30 +107,6 @@ function SignInContent() {
     }
   };
 
-  const handleGoogleAuth = async () => {
-    setError("");
-    setNotice("");
-    setIsGoogleSubmitting(true);
-
-    try {
-      const redirectTo = `${window.location.origin}/auth/callback?next=${encodeURIComponent(nextPath)}`;
-
-      const { error: oauthError } = await supabase.auth.signInWithOAuth({
-        provider: "google",
-        options: { redirectTo },
-      });
-
-      if (oauthError) {
-        throw oauthError;
-      }
-    } catch (authError) {
-      if (isMountedRef.current) {
-        setError(authError instanceof Error ? authError.message : "Google login failed.");
-        setIsGoogleSubmitting(false);
-      }
-    }
-  };
-
   const inputClass =
     "w-full rounded-[3px] border-2 border-ink bg-paper px-4 py-3 text-base text-ink placeholder:text-ink-faint outline-none transition-shadow focus:shadow-[0_0_0_4px_var(--highlight)]";
 
@@ -188,26 +162,6 @@ function SignInContent() {
                 transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
                 className="p-6 sm:p-8"
               >
-                <button
-                  type="button"
-                  onClick={handleGoogleAuth}
-                  disabled={isGoogleSubmitting}
-                  className="flex min-h-12 w-full items-center justify-center gap-3 rounded-[3px] bg-paper-sky px-4 font-semibold text-ink transition-transform duration-300 ease-out hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
-                >
-                  {isGoogleSubmitting ? (
-                    <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-                  ) : (
-                    <FaGoogle className="h-4 w-4" aria-hidden="true" />
-                  )}
-                  {isGoogleSubmitting ? "Opening Google..." : "Continue with Google"}
-                </button>
-
-                <div className="my-6 flex items-center gap-3 text-sm text-ink-faint">
-                  <span className="h-px flex-1 bg-rule" />
-                  or with email
-                  <span className="h-px flex-1 bg-rule" />
-                </div>
-
                 <form onSubmit={handleEmailAuth} className="space-y-4" noValidate>
                   <div>
                     <label htmlFor="email" className="mb-1.5 block text-sm font-semibold text-ink">

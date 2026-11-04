@@ -41,7 +41,7 @@ const QUESTIONS = [
   },
   {
     q: "How do I sign in?",
-    a: "With Google or with an email and password.",
+    a: "With an email and password.",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function WhyUs() {
               <h2 className="font-display text-[clamp(2.1rem,4.6vw,3.8rem)] font-extrabold leading-[0.98] tracking-[-0.035em]">
                 Find a lead with a name on it.
               </h2>
-              <PinTag className="mt-4 text-lg">Sign in with Google or email.</PinTag>
+              <PinTag className="mt-4 text-lg">Sign in with your email.</PinTag>
             </div>
             <TearLink href="/sign-in?next=%2Fdashboard" label="Start searching" tabs={6} />
           </Flyer>

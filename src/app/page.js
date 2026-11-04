@@ -256,7 +256,7 @@ export default function Home() {
                 Your next internship is probably already on someone&apos;s feed.
               </h2>
               <p className="mt-5 max-w-lg text-lg leading-8 text-ink-soft">
-                Sign in with Google or email and run your first search.
+                Sign in with your email and run your first search.
               </p>
             </div>
             <TearLink href={SEARCH_HREF} label="Sign in to search" tabs={6} />
