@@ -1,0 +1,230 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-board: var(--board);
+  --color-board-deep: var(--board-deep);
+  --color-board-ink: var(--board-ink);
+  --color-board-muted: var(--board-muted);
+  --color-board-line: var(--board-line);
+
+  --color-paper: var(--paper);
+  --color-paper-yellow: var(--paper-yellow);
+  --color-paper-pink: var(--paper-pink);
+  --color-paper-mint: var(--paper-mint);
+  --color-paper-sky: var(--paper-sky);
+  --color-paper-grey: var(--paper-grey);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+
+  --color-pin-red: #e23b2e;
+  --color-pin-yellow: #ffcf1f;
+  --color-pin-green: #18a058;
+  --color-pin-orange: #ff7a1a;
+  --color-highlight: var(--highlight);
+  --color-tape: var(--tape);
+  --color-alert: var(--alert);
+  --color-alert-paper: var(--alert-paper);
+
+  --color-background: var(--board);
+  --color-foreground: var(--board-ink);
+  --color-primary: var(--ink);
+  --color-primary-foreground: var(--paper);
+  --color-secondary: var(--paper-sky);
+  --color-secondary-foreground: var(--ink);
+  --color-accent: var(--paper-yellow);
+  --color-accent-foreground: var(--ink);
+  --color-input: var(--ink);
+  --color-border: var(--rule);
+  --color-ring: var(--highlight);
+
+  --font-display: var(--font-bricolage), "Bricolage Grotesque", sans-serif;
+  --font-sans: var(--font-figtree), "Figtree", system-ui, sans-serif;
+  --font-hand: var(--font-kalam), "Kalam", cursive;
+
+  --shadow-paper: 0 1px 0 rgb(10 18 60 / 0.10), 0 10px 18px -10px rgb(8 16 58 / 0.55);
+  --shadow-lift: 0 2px 0 rgb(10 18 60 / 0.08), 0 26px 34px -18px rgb(8 16 58 / 0.65);
+}
+
+:root {
+  --board: #2747c9;
+  --board-deep: #1c37a3;
+  --board-ink: #ffffff;
+  --board-muted: #d3dcff;
+  --board-line: rgb(255 255 255 / 0.22);
+
+  --paper: #fffef9;
+  --paper-yellow: #fff27a;
+  --paper-pink: #ffc9dc;
+  --paper-mint: #c6f1d6;
+  --paper-sky: #d4e8ff;
+  --paper-grey: #e4e4e0;
+
+  --ink: #17181c;
+  --ink-soft: #3f424b;
+  --ink-faint: #5e626d;
+  --rule: #c9ccd6;
+
+  --highlight: #ffe94a;
+  --tape: rgb(244 236 205 / 0.88);
+  --alert: #a3241a;
+  --alert-paper: #ffe1dc;
+}
+
+.dark {
+  --board: #131a33;
+  --board-deep: #0c1226;
+  --board-ink: #eef1ff;
+  --board-muted: #aeb9e6;
+  --board-line: rgb(238 241 255 / 0.16);
+
+  --paper: #ecebe3;
+  --paper-yellow: #e6da6c;
+  --paper-pink: #e8b6c8;
+  --paper-mint: #b3dbc2;
+  --paper-sky: #bcd2ec;
+  --paper-grey: #cfcfca;
+
+  --highlight: #f2dc3a;
+  --tape: rgb(220 212 182 / 0.85);
+}
+
+@layer base {
+  html {
+    background: var(--board);
+    color: var(--board-ink);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--board);
+    color: var(--board-ink);
+    font-family: var(--font-figtree), "Figtree", system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--highlight);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--highlight);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  input,
+  textarea {
+    caret-color: var(--color-pin-red);
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 0.08em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--board-line) transparent;
+  }
+}
+
+@layer components {
+/* The pinboard surface: a soft-board covered in chart paper, marked only by old pin holes. */
+.board-surface {
+  background-color: var(--board);
+  background-image:
+    radial-gradient(circle at 18% 22%, rgb(0 0 0 / 0.16) 0 1.4px, transparent 2px),
+    radial-gradient(circle at 71% 64%, rgb(0 0 0 / 0.14) 0 1.4px, transparent 2px),
+    radial-gradient(circle at 44% 86%, rgb(0 0 0 / 0.12) 0 1.2px, transparent 1.8px);
+  background-size: 340px 300px, 420px 380px, 260px 340px;
+}
+
+/* Paper: square-cornered sheets that sit crooked and straighten as they lift. */
+.flyer {
+  position: relative;
+  color: var(--ink);
+  border-radius: 2px;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(var(--tilt, 0deg));
+  transition:
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flyer-lift:hover,
+.flyer-lift:focus-within {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow: var(--shadow-lift);
+}
+
+/* Tear-off tabs along the bottom of a flyer. */
+.tear-row {
+  display: flex;
+  border-top: 2px dashed var(--rule);
+}
+
+.tear-tab {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform-origin: top center;
+  padding: 0.85rem 0;
+  border-right: 1.5px dashed var(--rule);
+  transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tear-tab:last-child {
+  border-right: 0;
+}
+
+.tear-link:hover .tear-tab:first-child,
+.tear-link:focus-visible .tear-tab:first-child {
+  transform: rotate(-7deg) translateY(4px);
+}
+
+.tear-link:active .tear-tab:first-child {
+  transform: rotate(-14deg) translateY(14px);
+}
+
+/* Highlighter marks in example queries. */
+.marker {
+  background: linear-gradient(transparent 12%, var(--highlight) 12%, var(--highlight) 88%, transparent 88%);
+  padding: 0 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.tape {
+  background: var(--tape);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flyer,
+  .tear-tab {
+    transition: none;
+  }
+
+  .flyer-lift:hover,
+  .flyer-lift:focus-within {
+    transform: rotate(var(--tilt, 0deg));
+  }
+}
+}

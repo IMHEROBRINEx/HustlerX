@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04T06:40:00Z",
+  "title": "Design System: Truss",
+  "extensions": {
+    "colorMeta": {
+      "board": { "role": "primary", "displayName": "Placement Board Blue", "canonical": "#2747c9", "dark": "#131a33" },
+      "board-deep": { "role": "primary", "displayName": "Deep Board", "canonical": "#1c37a3", "dark": "#0c1226" },
+      "paper-yellow": { "role": "secondary", "displayName": "Sticky Yellow", "canonical": "#fff27a", "dark": "#e6da6c" },
+      "highlight": { "role": "secondary", "displayName": "Highlighter", "canonical": "#ffe94a", "dark": "#f2dc3a" },
+      "paper": { "role": "neutral", "displayName": "Flyer Paper", "canonical": "#fffef9", "dark": "#ecebe3" },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#17181c" },
+      "paper-pink": { "role": "tertiary", "displayName": "Notice Pink", "canonical": "#ffc9dc", "dark": "#e8b6c8" },
+      "paper-mint": { "role": "tertiary", "displayName": "Sticky Mint", "canonical": "#c6f1d6", "dark": "#b3dbc2" },
+      "paper-sky": { "role": "tertiary", "displayName": "Index Sky", "canonical": "#d4e8ff", "dark": "#bcd2ec" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page H1s, often with a highlighter mark." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s." },
+      "title": { "displayName": "Title", "purpose": "Flyer headings: post titles, names." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs, forms, results." },
+      "label": { "displayName": "Label", "purpose": "Degree stamps and step labels." },
+      "hand": { "displayName": "Hand", "purpose": "Annotations and Example tags only." }
+    },
+    "shadows": [
+      { "name": "paper", "value": "0 1px 0 rgb(10 18 60 / 0.10), 0 10px 18px -10px rgb(8 16 58 / 0.55)", "purpose": "Every resting sheet." },
+      { "name": "lift", "value": "0 2px 0 rgb(10 18 60 / 0.08), 0 26px 34px -18px rgb(8 16 58 / 0.65)", "purpose": "Interactive sheet on hover or focus." }
+    ],
+    "motion": [
+      { "name": "straighten", "value": "420ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Sheet rotates to 0deg and lifts." },
+      { "name": "button-lift", "value": "300ms ease-out", "purpose": "Buttons rise 2px on hover." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink submit button used inside flyers.",
+      "html": "<button class=\"ds-btn-ink\">Search posts</button>",
+      "css": ".ds-btn-ink { display:inline-flex; align-items:center; min-height:44px; padding:0 20px; border:0; border-radius:3px; background:#17181c; color:#fffef9; font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:0.95rem; letter-spacing:-0.01em; cursor:pointer; transition:transform 300ms ease-out; } .ds-btn-ink:hover { transform:translateY(-2px); } .ds-btn-ink:focus-visible { outline:3px solid #ffe94a; outline-offset:3px; }"
+    },
+    {
+      "name": "Yellow Button",
+      "kind": "button",
+      "refersTo": "button-yellow",
+      "description": "The one primary action on the board.",
+      "html": "<button class=\"ds-btn-yellow\">Start searching</button>",
+      "css": ".ds-btn-yellow { display:inline-flex; align-items:center; min-height:44px; padding:0 20px; border:0; border-radius:3px; background:#fff27a; color:#17181c; font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:0.95rem; cursor:pointer; transition:transform 300ms ease-out; } .ds-btn-yellow:hover { transform:translateY(-2px); } .ds-btn-yellow:focus-visible { outline:3px solid #ffe94a; outline-offset:3px; }"
+    },
+    {
+      "name": "Flyer",
+      "kind": "card",
+      "refersTo": "flyer",
+      "description": "A pinned paper sheet; the only content surface.",
+      "html": "<div class=\"ds-board\"><article class=\"ds-flyer\" tabindex=\"0\"><span class=\"ds-pin\"></span><span class=\"ds-stamp\">1st degree</span><h3>Frontend Intern, Bengaluru</h3><p>Design-systems team is taking 2 interns.</p><em>Posted by Ananya, your senior</em></article></div>",
+      "css": ".ds-board { background:#2747c9; padding:40px; } .ds-flyer { position:relative; max-width:300px; padding:24px; background:#fff27a; color:#17181c; border-radius:2px; transform:rotate(-1.5deg); box-shadow:0 1px 0 rgb(10 18 60 / 0.10), 0 10px 18px -10px rgb(8 16 58 / 0.55); transition:transform 420ms cubic-bezier(0.16,1,0.3,1), box-shadow 420ms cubic-bezier(0.16,1,0.3,1); font-family:Figtree,system-ui,sans-serif; } .ds-flyer:hover, .ds-flyer:focus-visible { transform:rotate(0) translateY(-4px); box-shadow:0 2px 0 rgb(10 18 60 / 0.08), 0 26px 34px -18px rgb(8 16 58 / 0.65); outline:none; } .ds-flyer h3 { font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:1.2rem; margin:12px 0 6px; } .ds-flyer p { margin:0 0 12px; font-size:0.9rem; color:#3f424b; } .ds-flyer em { font-family:Kalam,cursive; font-style:normal; color:#3f424b; } .ds-pin { position:absolute; top:-10px; left:50%; width:18px; height:18px; margin-left:-9px; border-radius:50%; background:#e23b2e; box-shadow:2px 3px 3px rgb(8 16 58 / 0.3); } .ds-stamp { display:inline-block; border:1.5px solid #17181c; border-radius:9999px; padding:2px 8px; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; }"
+    },
+    {
+      "name": "Example Query Chip",
+      "kind": "chip",
+      "refersTo": "chip-example",
+      "description": "Click to fill the field and search immediately.",
+      "html": "<button class=\"ds-chip\">Summer finance internships in Mumbai</button>",
+      "css": ".ds-chip { border:0; border-radius:9999px; padding:4px 10px; background:#d4e8ff; color:#17181c; font-family:Figtree,system-ui,sans-serif; font-size:0.8rem; cursor:pointer; } .ds-chip:hover { background:#fff27a; } .ds-chip:focus-visible { outline:3px solid #ffe94a; outline-offset:3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Paper field with ink border and red caret.",
+      "html": "<label class=\"ds-label\">What are you looking for?<textarea class=\"ds-input\" rows=\"3\">Frontend internships in Bengaluru posted this week</textarea></label>",
+      "css": ".ds-label { display:block; font-family:Figtree,system-ui,sans-serif; font-weight:600; color:#17181c; background:#fffef9; padding:20px; } .ds-input { display:block; width:100%; margin-top:8px; padding:12px 14px; border:2px solid #17181c; border-radius:2px; background:#fffef9; color:#17181c; font:inherit; font-weight:400; caret-color:#e23b2e; resize:vertical; } .ds-input:focus-visible { outline:3px solid #ffe94a; outline-offset:3px; }"
+    },
+    {
+      "name": "Tear-off Strip",
+      "kind": "custom",
+      "refersTo": "flyer",
+      "description": "Vertical tear-off tabs repeating the action; one link.",
+      "html": "<a class=\"ds-tear\" href=\"#\"><span class=\"on\">Start searching</span><span aria-hidden=\"true\">Start searching</span><span aria-hidden=\"true\">Start searching</span><span aria-hidden=\"true\">Start searching</span></a>",
+      "css": ".ds-tear { display:flex; width:320px; background:#fffef9; border-top:2px dashed #c9ccd6; text-decoration:none; } .ds-tear span { flex:1; writing-mode:vertical-rl; transform:rotate(180deg); padding:14px 0; border-left:1px dashed #c9ccd6; font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:0.85rem; color:#3f424b; text-align:center; transition:transform 300ms ease-out; } .ds-tear span.on { background:#fff27a; color:#17181c; } .ds-tear:hover span.on { transform:rotate(180deg) translateY(-6px); } .ds-tear:focus-visible { outline:3px solid #ffe94a; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Placement Board",
+    "overview": "Truss looks like the notice board outside a college placement cell: a saturated blue soft-board, and on it paper flyers pinned up by people you know. Every piece of content is a sheet of paper. The board is loud and the paper is quiet, so the eye always lands on the posts.",
+    "keyCharacteristics": [
+      "A blue board as the page background, with paper sheets as the only content surfaces.",
+      "Sheets are tilted by small, varied angles and straighten on hover or focus.",
+      "Pins and tape show how a sheet is attached.",
+      "A chunky grotesque display face, a plain humanist sans for body text, and a handwritten face only for tags.",
+      "Yellow highlighter and yellow paper carry emphasis and the main action."
+    ],
+    "rules": [
+      { "name": "The Ink-on-Paper Rule", "body": "Ink-colored text only ever sits on paper. Text on the board is Board White or Board Mist.", "section": "colors" },
+      { "name": "The One Yellow Thing Rule", "body": "Each viewport has one primary yellow action.", "section": "colors" },
+      { "name": "The Handwriting Is Annotation Rule", "body": "Kalam is never used for headings, buttons, form labels, or anything a student must read to complete a task.", "section": "typography" },
+      { "name": "The Straighten-Up Rule", "body": "Interactive sheets rotate back to 0deg and lift on hover or focus. With reduced motion, tilt stays but movement is removed.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do put every piece of content on a sheet of paper, and keep the board itself empty.",
+      "Do vary tilts slightly between neighboring sheets (between -2° and +2°), and keep forms and long reading sheets at or below 1°.",
+      "Do label all illustrative posts and people with a handwritten \"Example\" tag.",
+      "Do use the highlighter on two to four words of a headline, not whole sentences.",
+      "Do keep primary text contrast at WCAG AA or better on every paper color, in both themes."
+    ],
+    "donts": [
+      "Don't add rounded \"SaaS cards\", glassmorphism, or gradient backgrounds. Surfaces are paper on a board.",
+      "Don't fabricate stats, testimonials, or counts.",
+      "Don't use Kalam for headings, buttons, or form labels.",
+      "Don't use more than one yellow primary button per viewport.",
+      "Don't reintroduce the removed Dashboard or Truss Connect surfaces."
+    ]
+  }
+}

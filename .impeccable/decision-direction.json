@@ -1,0 +1,145 @@
+{
+  "title": "Choose the new look for Truss",
+  "question": "The roll picked Campus Line. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Campus Line",
+      "kicker": "THE ROLL",
+      "lineage": "City metro maps: Delhi and Bengaluru Metro line diagrams, Vignelli-style transit graphics",
+      "thesis": "Every internship is a station on a line that starts with you.",
+      "palette": ["#fbfbf8", "#16181d", "#f5c400", "#1f5fd6", "#e0367a", "#12a150"],
+      "materials": ["transit diagram lines", "station roundels", "platform signage type"],
+      "viewport": "A giant line runs across the page: You, then 1st-degree, then 2nd-degree stops, each ending at a real-looking internship post. The search bar is the ticket counter.",
+      "risk": "Turns into a metro gimmick if the lines decorate instead of showing how far each lead is from you.",
+      "raised": [
+        {
+          "from": "Algorave floor",
+          "raise": "Before you search, the query shows what Truss understood (degree, time window, role) as station chips, so nothing about the filters is hidden."
+        },
+        {
+          "from": "Lowicz papercut",
+          "raise": "No drop shadows anywhere: depth comes only from flat colour lines crossing and overlapping."
+        },
+        {
+          "from": "Hoffmann lattice",
+          "raise": "Station spacing is one fixed unit; on small screens the line re-counts its stops instead of stretching."
+        },
+        {
+          "from": "Starship terminal",
+          "raise": "Every zone carries a short line code, like a station code, so sections and results are labelled the same way everywhere."
+        }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "Placement Board",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "The campus placement-cell notice board",
+      "thesis": "Every lead is a flyer, pinned by someone you know.",
+      "palette": ["#fffdf6", "#1d1b18", "#c89a63", "#e23b2e", "#ffe94a"],
+      "materials": ["printed flyers", "push pins", "highlighter marks"],
+      "viewport": "A wide board of pinned internship flyers, each with a pin tag naming the person who posted it and their degree.",
+      "risk": "Familiar: corkboards are a common student-site move and can feel like clip art if the paper isn't crafted.",
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-step-row",
+      "label": "Fresh Step Row",
+      "verdict": "competitive",
+      "lineage": "Early-80s drum machine step sequencer",
+      "thesis": "Freshness is the beat: posts light up on a 16-step row of the last two weeks.",
+      "palette": ["#24262b", "#e5372b", "#f08a24", "#f4cf3a", "#f2efe6"],
+      "materials": ["candy step keys", "LED chase light", "silkscreen labels"],
+      "viewport": "A 16-key timeline of recent days across the top; lit keys are days with matching posts, and the chase light marks today.",
+      "case": "Makes freshness vivid, but students identify less with drum machines and it hides the who-do-I-know story.",
+      "risk": "Reads as a music toy if the timeline doesn't map to real dates.",
+      "comp": ".impeccable/mocks/decision/challenger-step-row.webp",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp"
+    },
+    {
+      "id": "challenger-terminal",
+      "label": "Starship Terminal",
+      "verdict": "declined",
+      "lineage": "Used-future starship crew terminals",
+      "thesis": "Search as typed commands on curved phosphor glass.",
+      "palette": ["#0c0f0c", "#5cff7a", "#ffb000", "#e8e4d8"],
+      "materials": ["crt phosphor", "stencil plates"],
+      "viewport": "One command line that prints results in green capitals.",
+      "case": "Students don't see themselves in a ship terminal, and it buries who posted each lead.",
+      "kept": "Every zone gets a code label.",
+      "risk": "Sci-fi costume.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-industrial-starship-terminal-hero.webp"
+    },
+    {
+      "id": "challenger-lattice",
+      "label": "Hoffmann Lattice",
+      "verdict": "declined",
+      "lineage": "Wiener Werkstätte metalwork",
+      "thesis": "Content in strict square-punched lattices.",
+      "palette": ["#ffffff", "#111111", "#b8b8b8"],
+      "materials": ["lacquer black", "hammered silver"],
+      "viewport": "A square grid of posts in black-ruled cells.",
+      "case": "Too formal and luxurious for students.",
+      "kept": "Fixed units that re-count, never stretch.",
+      "risk": "Cold.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-hoffmann-gridsmith-showroom-hero.webp"
+    },
+    {
+      "id": "challenger-algorave",
+      "label": "Algorave Floor",
+      "verdict": "declined",
+      "lineage": "Live-coded music performance",
+      "thesis": "The query is live code; edits change results.",
+      "palette": ["#050505", "#39ff88", "#ff3fb4", "#ffb000"],
+      "materials": ["projected code", "syntax colour"],
+      "viewport": "A stage-sized code buffer.",
+      "case": "Niche, and code-first search scares non-CS students.",
+      "kept": "Show what changes before it applies.",
+      "risk": "Alienating.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-algorave-source-floor-hero.webp"
+    },
+    {
+      "id": "challenger-papercut",
+      "label": "Layered Papercut",
+      "verdict": "declined",
+      "lineage": "Łowicz folk papercuts",
+      "thesis": "Depth from layered flat colour, no shading.",
+      "palette": ["#f4efe2", "#d6262b", "#1f7a3b", "#f2b705"],
+      "materials": ["glossy cut paper"],
+      "viewport": "A symmetrical roundel built in layers.",
+      "case": "Beautiful but unrelated to students or job hunting.",
+      "kept": "Depth only by flat overlap, never shadows.",
+      "risk": "Decorative.",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-lowicz-layered-papercut-hero.webp"
+    },
+    {
+      "id": "challenger-miura",
+      "label": "Miura Fold Sheet",
+      "verdict": "declined",
+      "lineage": "Deployable Miura-fold origami",
+      "thesis": "One pull unfolds the whole result sheet.",
+      "palette": ["#f7f7f4", "#c9a227", "#8a8a85", "#9cc3e0"],
+      "materials": ["scored paper", "gold foil"],
+      "viewport": "A folded packet that opens into results.",
+      "case": "Clever geometry, no student connection.",
+      "kept": "Clear states for every step.",
+      "risk": "Abstract.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": true },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A clean student-career SaaS site, executed impeccably.",
+    "palette": ["#ffffff", "#111827", "#4f46e5"],
+    "materials": ["clean grid", "product screenshots"],
+    "viewport": "Headline left, app screenshot right, logo strip and feature grid below.",
+    "risk": "Looks like every other career platform by design.",
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  },
+  "steer": true
+}
