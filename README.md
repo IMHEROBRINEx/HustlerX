@@ -1,6 +1,6 @@
-# Truss
+# HustlerX
 
-Truss is a LinkedIn intelligence and outreach platform that combines analysis, graph exploration, AI-assisted strategy, and connection workflows into one dashboard.
+HustlerX is a LinkedIn intelligence and outreach platform that combines analysis, graph exploration, AI-assisted strategy, and connection workflows into one dashboard.
 
 It is built for one job: turn messy LinkedIn exports and live signals into actionable next moves.
 
@@ -22,12 +22,12 @@ It is built for one job: turn messy LinkedIn exports and live signals into actio
 
 ## Project Overview
 
-Truss currently includes:
+HustlerX currently includes:
 - LinkedIn data ingestion and analysis
 - Strategic Insights and Forecasting views
 - Connection Graph with up to 300 rendered nodes and interactive filters
-- Truss Intelligence people discovery
-- Truss Connect outreach queue and personalized AI messages
+- HustlerX Intelligence people discovery
+- HustlerX Connect outreach queue and personalized AI messages
 - Job Post Search with strict 1st/2nd-degree and time-aware filtering
 
 ## Architecture Files (5-Page Deep Dive)
@@ -76,8 +76,8 @@ Architecture first? Read the 5-page deep dive links above, then use this map as 
 ## Product Surfaces
 
 - Dashboard: upload CSVs, view metrics, strategic insights, forecasting, network health
-- Truss Intelligence: discover and queue high-fit people
-- Truss Connect: manage outreach, LinkedIn account state, send personalized connection requests
+- HustlerX Intelligence: discover and queue high-fit people
+- HustlerX Connect: manage outreach, LinkedIn account state, send personalized connection requests
 - Job Post Search: natural-language job/internship post search with strict filters
 
 ## Key Feature Flows
