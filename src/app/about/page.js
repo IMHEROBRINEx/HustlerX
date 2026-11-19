@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Flyer, PinTag, Tape, TearLink } from "@/components/board";
 
 export const metadata = {
-  title: "About | Truss",
+  title: "About | HustlerX",
 };
 
 export default function About() {
@@ -39,7 +39,7 @@ export default function About() {
               </p>
             </div>
             <PinTag className="mt-8 text-lg">
-              That&apos;s why Truss starts with people: the fastest way into a first job is usually someone who already knows
+              That&apos;s why HustlerX starts with people: the fastest way into a first job is usually someone who already knows
               you.
             </PinTag>
           </Flyer>

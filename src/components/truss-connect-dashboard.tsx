@@ -162,7 +162,7 @@ export function TrussConnectDashboard({
           }
         }
       } catch (error) {
-        console.warn('Failed to restore Truss Connect state:', error);
+        console.warn('Failed to restore HustlerX Connect state:', error);
       } finally {
         if (!cancelled) {
           setHasRestoredState(true);
@@ -187,7 +187,7 @@ export function TrussConnectDashboard({
         sendResults,
         sendSummary,
       }).catch((error) => {
-        console.warn('Failed to persist Truss Connect state:', error);
+        console.warn('Failed to persist HustlerX Connect state:', error);
       });
     }, 300);
 
@@ -579,7 +579,7 @@ export function TrussConnectDashboard({
         <div className="relative z-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3">
             <h1 className="font-[Epilogue] text-5xl font-black uppercase tracking-tight text-parchment md:text-6xl">
-              Truss Connect
+              HustlerX Connect
             </h1>
             <p className="max-w-xl font-[Newsreader] text-xl italic text-warm-foreground">
               Orchestrate outreach with human warmth and system-level precision.
@@ -601,7 +601,7 @@ export function TrussConnectDashboard({
         <div className="space-y-8 lg:col-span-4">
           <section className="space-y-6 rounded-xl border border-outline-variant/15 bg-surface-container-low p-6">
             <h3 className="font-[Epilogue] text-xs font-bold uppercase tracking-[0.2em] text-warm-foreground">
-              Truss Connect Status
+              HustlerX Connect Status
             </h3>
 
             <div className="flex items-center justify-between gap-4">
@@ -660,7 +660,7 @@ export function TrussConnectDashboard({
             </div>
 
             {pendingCount === 0 ? (
-              <p className="text-sm text-warm-muted">No candidates queued yet. Add profiles from Truss Intelligence.</p>
+              <p className="text-sm text-warm-muted">No candidates queued yet. Add profiles from HustlerX Intelligence.</p>
             ) : (
               <div className="max-h-72 space-y-3 overflow-y-auto pr-1 custom-scrollbar">
                 {candidates.map((candidate) => (

@@ -224,7 +224,7 @@ function SignInContent() {
             className="relative mx-auto mt-10 w-full max-w-[16rem] p-4 lg:ml-auto lg:mr-0"
           >
             <Tape className="-top-3 left-1/2 -translate-x-1/2 rotate-[-5deg]" />
-            <PinTag className="text-lg text-ink">Truss never posts or messages anyone for you.</PinTag>
+            <PinTag className="text-lg text-ink">HustlerX never posts or messages anyone for you.</PinTag>
           </Flyer>
         </div>
       </main>

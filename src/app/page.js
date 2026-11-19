@@ -45,7 +45,7 @@ export default function Home() {
                 Internships with <span className="marker">someone to ask.</span>
               </h1>
               <p className="mt-6 max-w-[34rem] text-lg leading-8 text-ink-soft">
-                Truss searches LinkedIn for this week&apos;s internship and job posts, written by the people doing the hiring.
+                HustlerX searches LinkedIn for this week&apos;s internship and job posts, written by the people doing the hiring.
                 Newest first, each with a person you can message, plus the official listings alongside.
               </p>
               <Link
@@ -61,7 +61,7 @@ export default function Home() {
 
           <div className="relative xl:col-span-6 xl:h-[660px]" aria-label="Example posts">
             <p className="mb-8 font-hand text-xl text-board-ink xl:absolute xl:-top-9 xl:left-2 xl:mb-0 xl:-rotate-2">
-              Example posts, the kind Truss finds
+              Example posts, the kind HustlerX finds
             </p>
             <div className="grid gap-10 sm:grid-cols-2 xl:block">
               <ExamplePost
@@ -116,7 +116,7 @@ export default function Home() {
               Type it the way you&apos;d text a friend.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-board-muted">
-              No filters to fiddle with. Truss reads your sentence, picks out what matters, and turns any time you mention
+              No filters to fiddle with. HustlerX reads your sentence, picks out what matters, and turns any time you mention
               into a hard rule.
             </p>
 
@@ -146,12 +146,12 @@ export default function Home() {
               {[
                 ["Search in plain words", "Role, city, skills, company type, how recent. Write it however you'd say it."],
                 [
-                  "Truss keeps only fresh posts",
+                  "HustlerX keeps only fresh posts",
                   "Hiring posts and job listings from the last 7 days by default, newest first. Switch to 24 hours, 3 days, or 30 days.",
                 ],
                 [
                   "You reach out yourself",
-                  "Open the post on LinkedIn, comment, or message the person who shared it. Truss never posts or messages for you.",
+                  "Open the post on LinkedIn, comment, or message the person who shared it. HustlerX never posts or messages for you.",
                 ],
               ].map(([title, body], index) => (
                 <li key={title} className="border-t-2 border-board-line pt-5">
@@ -167,7 +167,7 @@ export default function Home() {
         {/* Job board vs your board */}
         <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
           <h2 className="max-w-3xl font-display text-[clamp(2.1rem,4.4vw,3.6rem)] font-extrabold leading-[1] tracking-[-0.03em] text-board-ink">
-            A job board gives you a listing. Truss gives you a person.
+            A job board gives you a listing. HustlerX gives you a person.
           </h2>
           <div className="mt-16 grid items-start gap-12 md:grid-cols-2 md:gap-16">
             <Flyer paper="grey" pin={null} tilt={1.2} lift={false} className="p-7">
@@ -265,14 +265,14 @@ export default function Home() {
             <Flyer paper="white" pin="green" tilt={2} lift={false} className="w-full max-w-xs p-6 text-center">
               <p className="font-hand text-xl text-ink">On your phone between classes?</p>
               <div className="mt-4">
-                <ShowQr value="https://truss-ten.vercel.app/" buttonLabel="Show QR code" />
+                <ShowQr buttonLabel="Show QR code" />
               </div>
             </Flyer>
             <Link
               href="/why-us"
               className="inline-flex items-center gap-1 text-[0.95rem] font-semibold text-board-ink underline"
             >
-              Why Truss works for students
+              Why HustlerX works for students
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>

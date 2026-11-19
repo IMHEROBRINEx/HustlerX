@@ -6,7 +6,7 @@ import { Menu } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "How it works", path: "/" },
-  { label: "Why Truss", path: "/why-us" },
+  { label: "Why HustlerX", path: "/why-us" },
   { label: "About", path: "/about" },
 ];
 
@@ -17,12 +17,12 @@ export default function Navbar() {
     <header className="relative z-40 mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 pt-5 sm:px-8">
       <Link
         href="/"
-        aria-label="Truss home"
+        aria-label="HustlerX home"
         className="flyer relative bg-paper px-4 py-1.5 font-display text-2xl font-extrabold tracking-[-0.03em] text-ink"
         style={{ "--tilt": "-2deg" }}
       >
         <span aria-hidden="true" className="tape absolute -top-2.5 left-1/2 block h-4 w-12 -translate-x-1/2 rotate-[4deg]" />
-        Truss
+        HustlerX
       </Link>
 
       <nav aria-label="Main" className="hidden items-center gap-7 md:flex">

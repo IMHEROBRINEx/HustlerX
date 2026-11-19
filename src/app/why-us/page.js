@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Flyer, PinTag, Tape, TearLink } from "@/components/board";
 
 export const metadata = {
-  title: "Why Truss | Truss",
+  title: "Why HustlerX | HustlerX",
 };
 
 const REASONS = [
@@ -29,11 +29,11 @@ const REASONS = [
 const QUESTIONS = [
   {
     q: "Do I need a big LinkedIn network?",
-    a: "No. Truss searches public LinkedIn hiring posts and job listings, so it works from day one. A bigger network still helps when you reach out, because a shared connection makes your message warmer.",
+    a: "No. HustlerX searches public LinkedIn hiring posts and job listings, so it works from day one. A bigger network still helps when you reach out, because a shared connection makes your message warmer.",
   },
   {
-    q: "Does Truss apply, post, or message for me?",
-    a: "No. Truss finds posts and people. You open them on LinkedIn and reach out yourself, in your own words.",
+    q: "Does HustlerX apply, post, or message for me?",
+    a: "No. HustlerX finds posts and people. You open them on LinkedIn and reach out yourself, in your own words.",
   },
   {
     q: "Is it only for tech internships?",
@@ -56,7 +56,7 @@ export default function WhyUs() {
             Cold-applying is a lottery. A warm lead isn&apos;t.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-board-muted">
-            Applying through a portal usually means joining a long queue with no one to ask. Truss starts from the other end:
+            Applying through a portal usually means joining a long queue with no one to ask. HustlerX starts from the other end:
             posts shared by people you&apos;re already connected to.
           </p>
         </section>

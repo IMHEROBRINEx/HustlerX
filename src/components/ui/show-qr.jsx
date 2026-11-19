@@ -8,6 +8,11 @@ import { QRCodeSVG } from "qrcode.react";
 export const ShowQr = ({ value, buttonLabel = "Show QR code", onCopy }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const [siteUrl, setSiteUrl] = useState(value || "");
+
+  useEffect(() => {
+    if (!value) setSiteUrl(window.location.origin);
+  }, [value]);
 
   useEffect(() => {
     if (!isCopied) return undefined;
@@ -42,13 +47,13 @@ export const ShowQr = ({ value, buttonLabel = "Show QR code", onCopy }) => {
             className="flex flex-col items-center gap-3"
           >
             <div className="rounded-[3px] bg-paper p-3 ring-2 ring-ink">
-              <QRCodeSVG value={value} size={168} level="M" fgColor="#17181c" bgColor="transparent" />
+              <QRCodeSVG value={siteUrl} size={168} level="M" fgColor="#17181c" bgColor="transparent" />
             </div>
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => {
-                  navigator.clipboard.writeText(value);
+                  navigator.clipboard.writeText(siteUrl);
                   setIsCopied(true);
                   onCopy?.();
                 }}

@@ -510,7 +510,7 @@ export async function POST(request: NextRequest) {
       },
     });
   } catch (error) {
-    console.error('Truss Connect send requests failed:', error);
+    console.error('HustlerX Connect send requests failed:', error);
     return NextResponse.json(
       {
         success: false,

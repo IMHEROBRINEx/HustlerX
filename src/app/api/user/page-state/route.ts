@@ -27,7 +27,7 @@ function missingTableHint(errorMessage: string): string | undefined {
     return undefined;
   }
 
-  return 'Run the SQL in supabase/truss_multitenant.sql to create required tables.';
+  return 'The database tables required for saved settings are missing.';
 }
 
 export async function GET(request: NextRequest) {
@@ -138,3 +138,4 @@ export async function PUT(request: NextRequest) {
     );
   }
 }
+

@@ -79,7 +79,7 @@ export function ExaPeopleDashboard() {
           }
         }
       } catch (restoreError) {
-        console.warn('Failed to restore Truss Intelligence state:', restoreError);
+        console.warn('Failed to restore HustlerX Intelligence state:', restoreError);
       } finally {
         if (!cancelled) {
           setHasRestoredState(true);
@@ -102,7 +102,7 @@ export function ExaPeopleDashboard() {
         query,
         resultData,
       }).catch((persistError) => {
-        console.warn('Failed to persist Truss Intelligence state:', persistError);
+        console.warn('Failed to persist HustlerX Intelligence state:', persistError);
       });
     }, 300);
 

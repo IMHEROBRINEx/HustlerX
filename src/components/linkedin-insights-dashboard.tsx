@@ -468,7 +468,7 @@ export function LinkedInInsightsDashboard() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,182,146,0.08),transparent_65%)]" />
         <div className="relative z-10 space-y-4">
           <h1 className="font-[Epilogue] text-5xl font-black uppercase tracking-tight text-parchment md:text-7xl">
-            Truss <span className="text-ember-strong">Metrics</span>
+            HustlerX <span className="text-ember-strong">Metrics</span>
           </h1>
           <p className="max-w-3xl font-[Newsreader] text-xl italic text-warm-foreground md:text-2xl">
             Mapping the architecture of your professional network through the lens of primal data.

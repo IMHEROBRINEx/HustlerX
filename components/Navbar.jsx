@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 flex items-center justify-between px-4 py-2 bg-hearth-ash/70 backdrop-blur-xl border border-ember/8 rounded-full mx-auto w-11/12 max-w-5xl shadow-2xl">
       <div className="text-xl tracking-tighter text-ember epilogue-bold">
-        <Link href="/">Truss</Link>
+        <Link href="/">HustlerX</Link>
       </div>
 
       <div className="hidden md:block">

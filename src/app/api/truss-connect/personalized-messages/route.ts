@@ -197,7 +197,7 @@ async function generateWithAI(
       'Content-Type': 'application/json',
       Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
       'HTTP-Referer': REQUEST_ORIGIN,
-      'X-Title': 'Truss Connect',
+      'X-Title': 'HustlerX Connect',
     },
     body: JSON.stringify({
       model: MODEL,
@@ -241,7 +241,7 @@ export async function POST(request: NextRequest) {
     const aiMessages = await generateWithAI(
       normalizedRecipients,
       body.messageTemplate,
-      user.fullName || user.email || 'Truss user',
+      user.fullName || user.email || 'HustlerX user',
     );
 
     if (aiMessages && aiMessages.length > 0) {

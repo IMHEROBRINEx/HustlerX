@@ -93,7 +93,7 @@ export async function GET() {
       ...(warning ? { warning } : {}),
     });
   } catch (error) {
-    console.error('Failed to load Truss Connect account status:', error);
+    console.error('Failed to load HustlerX Connect account status:', error);
     return NextResponse.json(
       {
         success: false,

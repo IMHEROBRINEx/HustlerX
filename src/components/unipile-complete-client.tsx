@@ -44,15 +44,15 @@ export function UnipileCompleteClient() {
         </h1>
         <p className="text-ink-soft">
           {connected
-            ? 'You can head back to Truss now.'
-            : 'Head back to Truss to keep going.'}
+            ? 'You can head back to HustlerX now.'
+            : 'Head back to HustlerX to keep going.'}
         </p>
         <p className="text-sm text-ink-faint">You can close this window.</p>
         <Link
           href="/dashboard"
           className="inline-flex min-h-11 items-center justify-center rounded-[3px] bg-ink px-5 font-display font-bold text-paper"
         >
-          Back to Truss
+          Back to HustlerX
         </Link>
       </div>
     </main>

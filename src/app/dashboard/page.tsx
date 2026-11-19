@@ -207,11 +207,11 @@ export default function DashboardPage() {
       <header className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-6 gap-y-4 px-5 pt-5 sm:px-8">
         <Link
           href="/"
-          aria-label="Truss home"
+          aria-label="HustlerX home"
           className="flyer bg-paper px-3.5 py-1 font-display text-xl font-extrabold tracking-[-0.03em] text-ink"
           style={{ '--tilt': '-2deg' } as React.CSSProperties}
         >
-          Truss
+          HustlerX
         </Link>
 
         <nav aria-label="Sections" className="order-3 flex w-full gap-2 sm:order-none sm:w-auto">
