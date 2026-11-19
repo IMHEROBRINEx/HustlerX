@@ -23,9 +23,9 @@ const kalam = Kalam({
 });
 
 export const metadata = {
-  title: "Truss | Internships with someone to ask",
+  title: "HustlerX | Internships with someone to ask",
   description:
-    "Truss finds this week's internship and job posts on LinkedIn, newest first, so every lead comes with someone you can message.",
+    "HustlerX finds this week's internship and job posts on LinkedIn, newest first, so every lead comes with someone you can message.",
 };
 
 const themeInitScript = `(() => {
